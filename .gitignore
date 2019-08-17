@@ -1,0 +1,3 @@
+/node_modules
+/sql/data_big.sql
+/sql/*.csv
