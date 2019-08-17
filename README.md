@@ -26,6 +26,6 @@ node run_query.js [ip] [port] [id] [pw] [query]
 ## 기타
 ```
 # check the database size
-node run_query.js 133.186.136.137 11000 admin nhnent2016 'SELECT table_schema AS "Database", ROUND(SUM(data_length + index_length) / 1024 / 1024, 2) AS "Size (MB)" FROM information_schema.TABLES GROUP BY table_schema;'
+node run_query.js [ip] [port] [id] [password] 'SELECT table_schema AS "Database", ROUND(SUM(data_length + index_length) / 1024 / 1024, 2) AS "Size (MB)" FROM information_schema.TABLES GROUP BY table_schema;'
 
 ```
