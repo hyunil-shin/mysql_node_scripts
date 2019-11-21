@@ -20,7 +20,7 @@ var pool = mysql.createPool({
 	
 	if ( err ) throw err;
 	 else {
-    connection.query( 'FLUSH TABLES WITH READ LOCK', function(err, rows) {
+    connection.query( 'lock tables rds_maintenance.chk_masterha read;', function(err, rows) {
       // And done with the connection.
    
 	connection.release();
