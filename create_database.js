@@ -32,7 +32,7 @@ forEach(["./sql/create_database.sql"], function(item, index, arr) {
 		    console.log(err);
 		    console.log("query" , err.sqlMessage);
 		    connection.end();
-		    process.exit();	
+		    process.exit(1);	
 		}else {
 			console.log("create database : " , rows);
 		}        
