@@ -29,6 +29,7 @@ forEach(["./sql/create_database.sql"], function(item, index, arr) {
 	
 	connection.query(query,function (err, rows, fields) {
 	    if(err){
+		    console.log(err);
 		    console.log("query" , err.sqlMessage);
 		    connection.end();
 		    process.exit();	
