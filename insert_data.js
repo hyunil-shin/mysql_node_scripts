@@ -7,6 +7,7 @@ const user = args[4];
 const pw = args[5];
 const iter = args[6];
 
+console.log("insert data")
 
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
@@ -34,6 +35,7 @@ forEach(fruits, function(item, index, arr) {
 	connection.query(query,function (err, rows, fields) {
 	    if(err){
 		    console.log("error: " , err.sqlMessage);
+                    console.log(err);
 		    connection.end();
 		    process.exit(100);	
 		}else {
