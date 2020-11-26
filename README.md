@@ -22,6 +22,17 @@ node run_query.js [ip] [port] [id] [pw] [query]
 
 ```
 
+## how to use Docker
+```
+docker build . --no-cache -t mynode
+docker run mynode /script/init_database.sh 172.17.0.1 3306 root testcafe123
+
+```
+
+## how to run mysql server
+```
+docker run -e MYSQL_ROOT_PASSWORD=testcafe123  -p 3306:3306  mysql:5.7.32 --max_allowed_packet=100M
+```
 
 ## 기타
 ```
