@@ -23,7 +23,7 @@ connection.connect();
 
 connection.query(query, function (err, rows, fields) {
     if(err){
-	    console.log("error: " , err.sqlMessage);
+	    console.log("error: " , err);
 	    connection.end();
 	    process.exit(100);	
 	}else {
