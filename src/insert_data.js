@@ -5,7 +5,8 @@ const ip = args[2];
 const port = args[3];
 const user = args[4];
 const pw = args[5];
-const iter = args[6];
+const db_name = args[6]
+const iter = args[7];
 
 console.log("insert data")
 
@@ -15,7 +16,7 @@ var connection = mysql.createConnection({
 	port: port,
 	user: user,
 	password: pw,
-	database: 'hello',
+	database: db_name,
 	multipleStatements: true
 });
 
